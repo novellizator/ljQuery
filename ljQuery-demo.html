@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<title> My Super-lightweight jQuery implementatoin</title>
+	<script type="application/javascript" src="ljQuery.js"> </script>
+	<script type="application/javascript" >
+	function runDemo()
+	{ 
+		$_ljquery("showAndColorize").show().setColor("blue").setBackgroundColor("gray");
+
+		$_ljquery("contentChange").setContent("New content + underlined").
+		setStyle("textDecoration", "underline");
+		
+		$_ljquery("greenClass").setStyle("backgroundColor", "green");
+		
+		$_ljquery("span").hide();
+	}
+	</script>
+</head>
+<body>
+	<h1> Lightweight-jQuery framework </h1>
+	 Feel free to view the source code of the framework, 
+	 it's pretty simple(~120 lines of code) and straighforward.
+	<br />
+	Click <a href="#" onclick="javascript:runDemo()"> HERE </a> to test for yourself!
+	Click <a href="#" onclick="javascript:location.reload()"> HERE </a> to refresh page!
+	<hr />
+
+
+
+
+	<!-- the demo code itself -->
+	<h2 id="showAndColorize" style="display:none;"> h2 id="showAndColorize" style="display:none;"</h2>
+
+	<p class="greenClass"> Paragraph class="greenClass"</p>
+	<p class="greenClass"> Paragraph class="greenClass" </p>
+
+	<p id="contentChange"> Old content </p>
+
+	<span> all SPANS will be hidden </span> <br />
+	<span> this one is no exception ;-) </span> 
+	<!-- end of the demo code -->
+
+	</body>
+</html>
