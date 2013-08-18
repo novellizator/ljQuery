@@ -6,14 +6,13 @@
 	<script type="application/javascript" >
 	function runDemo()
 	{ 
-		$_ljquery("showAndColorize").show().setColor("blue").setBackgroundColor("gray");
+		$_ljquery("greenClass").setStyle("backgroundColor", "green");
 
 		$_ljquery("contentChange").setContent("New content + underlined").
-		setStyle("textDecoration", "underline");
-		
-		$_ljquery("greenClass").setStyle("backgroundColor", "green");
-		
+			setStyle("textDecoration", "underline");
+			
 		$_ljquery("span").hide();
+		$_ljquery("showAndColorize").show().setColor("blue").setBackgroundColor("gray");
 	}
 	</script>
 </head>
@@ -30,15 +29,17 @@
 
 
 	<!-- the demo code itself -->
-	<h2 id="showAndColorize" style="display:none;"> h2 id="showAndColorize" style="display:none;"</h2>
-
-	<p class="greenClass"> Paragraph class="greenClass"</p>
-	<p class="greenClass"> Paragraph class="greenClass" </p>
+	<p class="greenClass"> This paragraph has class attribute set to "greenClass". <br>
+		You may be wondering wonder what will happen to it...
+	</p>
 
 	<p id="contentChange"> Old content </p>
 
 	<span> all SPANS will be hidden </span> <br />
-	<span> this one is no exception ;-) </span> 
+	<span> this SPAN is no exception ;-) </span> 
+	
+	<h2 id="showAndColorize" style="display:none;"> This heading was originally hidden.
+	It's magic!</h2>
 	<!-- end of the demo code -->
 
 	</body>
